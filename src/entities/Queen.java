@@ -1,14 +1,23 @@
 package entities;
 
+import java.util.ArrayList;
+
 import entities.enums.Color;
 
-public class Queen extends ChessPiece{
-    
+public class Queen extends Piece{
+
     public Queen(){
         super();
     }
 
-    public Queen(Color color, int x, int y){
-        super(color, new Position(x, y));
+    public Queen(Color color){
+        this.color = color;
+        this.type = 'Q';
+        this.possibleMoves = new ArrayList<>();
+    }
+
+    @Override
+    public void updatePossibleMoves(ChessBoard board){
+        
     }
 }
